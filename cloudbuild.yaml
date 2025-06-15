@@ -10,7 +10,8 @@ steps:
           --entry-point $_ENTRY_POINT \
           --set-env-vars "DAYFORGE_API_BASE_URL=https://us-central1-allprojects-424621.cloudfunctions.net/dayforge-function" \
           --set-secrets "GOOGLE_CLOUD_USERNAME=projects/$_PROJECT_ID/secrets/GOOGLE_CLOUD_USERNAME:latest,GOOGLE_CLOUD_PASSWORD=projects/$_PROJECT_ID/secrets/GOOGLE_CLOUD_PASSWORD:latest" \
-          --region $_REGION
+          --region $_REGION \
+          --no-allow-unauthenticated
 
 substitutions:
   _PROJECT_ID: "allprojects-424621"
